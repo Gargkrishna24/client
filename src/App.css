@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1515879218367-1f72f4b2b6f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHRleHR8ZW58MHx8fHwxNjc5NjY4MzM5&ixlib=rb-1.2.1&q=80&w=1080');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  backdrop-filter: blur(10px);
 }
 
-.App-link {
-  color: #61dafb;
+.translation-box {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  max-width: 700px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFD700; /* Gold color for the heading */
+}
+
+.language-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.language-selection div {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.language-selection div:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #FFD700; /* Gold color for labels */
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  transition: border 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border: 2px solid #FFD700; /* Gold border on focus */
+}
+
+.text-input {
+  width: 100%;
+  height: 150px; /* Increased height */
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 25px;
+  resize: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.text-input::placeholder {
+  color: #aaa;
+}
+
+.text-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.7); /* Gold glow on focus */
+}
+
+.translate-button {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #4CAF50, #66BB6A);
+  color: #fff;
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.translate-button:hover {
+  background: linear-gradient(90deg, #45a049, #66bb6a);
+  transform: translateY(-2px);
+}
+
+.translated-text {
+  margin-top: 25px;
+  font-size: 20px; /* Increased font size */
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px; /* Increased padding */
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15); /* Slightly more opaque */
+  color: #FFD700; /* Gold color for translated text */
 }
